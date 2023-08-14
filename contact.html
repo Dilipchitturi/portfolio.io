@@ -1,0 +1,111 @@
+<html lang="en">
+<head>
+    <title>CONTACT</title>
+
+    <style>
+        #register-form{
+            width: 350px;
+            background-color: transparent;
+            padding: 24px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+        }
+
+        .inputlabel{
+            margin: 0;
+            margin-bottom: 4px;
+            margin-top: 50px;
+        }
+
+        .input-item{
+            width: 100%;
+        }
+
+        #terms-check{
+            margin-top: 50px;
+            margin-bottom: 18px;
+        }
+        
+        .background-image-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("Bgnew.avif");
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: 0.5;
+        z-index: -1;
+        }
+
+        #popup {
+            display: none;
+            position: fixed;
+            left: 50%;
+            bottom: 20px;
+            transform: translateX(-50%);
+            background-color: white;
+            padding: 20px;
+            border: 3px solid black;
+            /* animation: fadeInOut 0s ease-in-out; */
+            width: 300px;
+            z-index: 9999;
+        }
+
+        @keyframes fadeInOut {
+            0% { opacity: 0; }
+            20% { opacity: 1; }
+            80% { opacity: 1; }
+            100% { opacity: 0; }
+        
+        }
+
+    </style>
+</head>
+<body style="margin: 200; background-color: transparent;">
+    <div class="background-image-container"></div>
+<body>
+
+<body style="background-color: lightblue;">
+    <h1 style="text-align: center;">CONTACT</h1>
+    <form id="register-form" method="POST">
+
+        <div>
+           <p class="input-label">Full Name:</p>
+            <input class="input-item" type="text" >
+        </div>
+
+        <div>
+            <p class="input-label">Email:</p>
+            <input class="input-item" type="email" name="email">
+        </div>
+
+       <div>
+        <p class="input-label">What's your Query??</p>
+        
+       </div>
+       
+       <div>
+        <textarea class="input-item" name="answer" id="" cols="30" rows="10"></textarea>
+       </div>
+       <br>
+       <input type="submit" value="Submit" onclick="showPopUp(); return false;" >
+    </form>
+
+    <div id="popup" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: white; padding: 10px; border: 2px solid black;">
+        <p style="margin: 0;">Thanks for contacting me, I will get back to you soon..!!</p>
+    </div>
+
+    <script>
+        function showPopUp() {
+            document.getElementById('popup').style.display = 'block';
+        }
+
+       setTimeout(function() {
+        document.getElementById('popup').style.display = 'none';
+        },3000);
+    </script>
+</body>
+</html>
